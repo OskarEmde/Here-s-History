@@ -279,3 +279,159 @@ window.addEventListener(
 
     }
 );
+
+
+
+
+/* =========================================================
+   08. FACT OF THE DAY
+========================================================= */
+
+const factTitle =
+    document.querySelector("#factTitle");
+
+const factText =
+    document.querySelector("#factText");
+
+const newFactButton =
+    document.querySelector("#newFactButton");
+
+const factContent =
+    document.querySelector(".fact-content");
+
+
+const historyFacts = [
+
+    {
+        title:
+            "Vikinger brugte ikke horn på deres hjelme",
+
+        text:
+            "Der findes ingen arkæologiske beviser for, at vikinger gik i kamp med horn på hjelmene. Forestillingen blev især populær gennem kunst og kostumer i 1800-tallet."
+    },
+
+    {
+        title:
+            "Cleopatra levede tættere på månelandingen end pyramidernes opførelse",
+
+        text:
+            "Den store pyramide i Giza blev bygget omkring 2500 f.Kr., mens Cleopatra levede omkring 30 f.Kr. Det betyder, at hendes levetid faktisk ligger tættere på Apollo 11 i 1969."
+    },
+
+    {
+        title:
+            "Verdens ældste kendte fredsaftale er over 3.000 år gammel",
+
+        text:
+            "Egypten og hittitterriget indgik en fredsaftale efter slaget ved Kadesh. Kopier af aftalen findes både i egyptiske og hittittiske kilder."
+    },
+
+    {
+        title:
+            "Oxford University er ældre end Aztekerriget",
+
+        text:
+            "Undervisning fandt sted i Oxford allerede omkring år 1096, mens Aztekerriget først blev grundlagt flere hundrede år senere i 1400-tallet."
+    },
+
+    {
+        title:
+            "Mammutter levede stadig, da pyramiderne blev bygget",
+
+        text:
+            "En mindre bestand af uldhårede mammutter overlevede på Wrangel Island tusindvis af år efter, at de fleste mammutter var uddøde."
+    },
+
+    {
+        title:
+            "Napoleon var ikke usædvanligt lav",
+
+        text:
+            "Napoleon Bonaparte var omtrent gennemsnitlig højde for en fransk mand på hans tid. Myten om hans lave højde skyldes blandt andet forskelle mellem franske og britiske måleenheder."
+    },
+
+    {
+        title:
+            "Romerriget brugte beton, som stadig eksisterer i dag",
+
+        text:
+            "Romerne fremstillede en særlig betonblanding, blandt andet med vulkansk aske. Mange romerske bygninger og havnekonstruktioner har derfor overlevet i næsten 2.000 år."
+    },
+
+    {
+        title:
+            "Den korteste krig varede mindre end en time",
+
+        text:
+            "Den anglo-zanzibarske krig i 1896 varede omkring 40 minutter og regnes ofte for den korteste registrerede krig i historien."
+    }
+
+];
+
+
+/* Select random fact */
+
+function showRandomFact() {
+
+    if (
+        !factTitle ||
+        !factText
+    ) {
+        return;
+    }
+
+
+    const randomIndex =
+        Math.floor(
+            Math.random() *
+            historyFacts.length
+        );
+
+
+    const fact =
+        historyFacts[randomIndex];
+
+
+    /* Restart animation */
+
+    factContent?.classList.remove(
+        "fact-changing"
+    );
+
+
+    void factContent?.offsetWidth;
+
+
+    factContent?.classList.add(
+        "fact-changing"
+    );
+
+
+    /* Insert content */
+
+    factTitle.textContent =
+        fact.title;
+
+    factText.textContent =
+        fact.text;
+}
+
+
+/* Button */
+
+newFactButton?.addEventListener(
+    "click",
+    showRandomFact
+);
+
+
+/* Show random fact when page loads */
+
+if (
+    factTitle &&
+    factText
+) {
+
+    showRandomFact();
+
+}

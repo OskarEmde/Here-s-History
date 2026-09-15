@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Fact of the Day | Here's History</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+            href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+            rel="stylesheet"
+    >
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript -->
+    <script src="script.js" defer></script>
+</head>
+
+<body class="fact-page">
+
+<!-- =========================================
+     HEADER
+========================================= -->
+
+<header class="site-header" id="top">
+
+    <a class="brand" href="index.html" aria-label="Here's History forside">
+
+        <img
+                src="assets/logo.png"
+                alt="Here's History logo"
+        >
+
+        <div>
+            <span class="brand-name">
+                HERE'S HISTORY
+            </span>
+
+            <span class="brand-tagline">
+                HISTORY LIVES HERE
+            </span>
+        </div>
+
+    </a>
+
+
+    <button
+            class="menu-toggle"
+            aria-label="Åbn menu"
+            aria-expanded="false"
+    >
+        ☰
+    </button>
+
+
+    <nav class="main-nav" aria-label="Primær navigation">
+
+        <a href="index.html">
+            Forside
+        </a>
+
+        <a href="index.html#products">
+            Produkter
+        </a>
+
+        <a href="index.html#how">
+            Sådan virker det
+        </a>
+
+        <a href="index.html#about">
+            Om os
+        </a>
+
+        <a
+                href="fact.html"
+                class="active"
+        >
+            Fact of the day
+        </a>
+
+    </nav>
+
+
+    <a
+            class="btn btn-red btn-small"
+            href="index.html#products"
+    >
+        Shop nu
+        <span>→</span>
+    </a>
+
+</header>
+
+
+<main class="fact-main">
+
+    <!-- =========================================
+         RANDOM FACT
+    ========================================== -->
+
+    <section class="fact-hero">
+
+        <div class="fact-heading">
+
+            <div class="fact-heading-line">
+                <span></span>
+
+                <p>
+                    Random History Fact Of The Day
+                </p>
+
+                <span></span>
+            </div>
+
+
+            <button
+                    class="fact-random-button"
+                    id="newFactButton"
+                    type="button"
+            >
+                Vidste du at
+            </button>
+
+        </div>
+
+
+        <div class="fact-content">
+
+            <h1 id="factTitle">
+                Random history fact Here!
+            </h1>
+
+            <p id="factText">
+                Context...
+            </p>
+
+        </div>
+
+
+        <!-- Decorative corners -->
+
+        <span class="fact-decoration fact-decoration-left"></span>
+
+        <span class="fact-decoration fact-decoration-right"></span>
+
+    </section>
+
+
+
+    <!-- =========================================
+         CUSTOM POSTER SECTION
+    ========================================== -->
+
+    <section class="fact-custom">
+
+        <div class="fact-custom-inner">
+
+            <div class="fact-custom-text">
+
+                <h2>
+                    Fået noget inspiration?
+                </h2>
+
+                <p>
+                    Vi laver også custom plakater.
+                </p>
+
+                <p>
+                    Bare send os hvilken historisk tekst
+                    der skal stå på plakaten og de billeder
+                    du vil have med.
+                </p>
+
+                <a
+                        href="mailto:kontakt@hereshistory.dk"
+                        class="fact-contact-link"
+                >
+                    Kontakt os →
+                </a>
+
+            </div>
+
+
+            <div class="fact-poster-preview">
+
+                <div class="mini-poster">
+
+                    <img
+                            src="assets/dannebrog-now.jpg"
+                            alt="Eksempel på historisk plakat"
+                    >
+
+                    <div class="mini-poster-space"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================================
+     FOOTER
+========================================= -->
+
+<footer class="footer">
+
+    <div class="footer-brand">
+
+        <img
+                src="assets/logo.png"
+                alt="Here's History logo"
+        >
+
+        <div>
+
+            <strong>
+                HERE'S HISTORY
+            </strong>
+
+            <span>
+                HISTORY LIVES HERE
+            </span>
+
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">
+            Forside
+        </a>
+
+        <a href="index.html#products">
+            Produkter
+        </a>
+
+        <a href="index.html#how">
+            Sådan virker det
+        </a>
+
+        <a href="index.html#about">
+            Om os
+        </a>
+
+    </nav>
+
+
+    <p>
+        © 2026 Here's History.
+        Alle rettigheder forbeholdes.
+    </p>
+
+</footer>
+
+</body>
+</html>

@@ -1669,7 +1669,6 @@ img {
       1fr;
   }
 
-}
 
 
 
@@ -1842,6 +1841,564 @@ img {
   .footer nav {
     flex-wrap:
             wrap;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   FACT OF THE DAY PAGE
+========================================================= */
+
+.fact-page {
+  background: var(--black);
+}
+
+
+/* =========================================================
+   MAIN FACT AREA
+========================================================= */
+
+.fact-main {
+  background: var(--cream);
+}
+
+
+/* Main fact section */
+
+.fact-hero {
+  position: relative;
+
+  min-height: 760px;
+
+  padding:
+          95px 7vw
+          100px;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+          radial-gradient(
+                  circle at 15% 20%,
+                  rgba(186, 138, 82, 0.08),
+                  transparent 28%
+          ),
+
+          radial-gradient(
+                  circle at 85% 30%,
+                  rgba(245, 203, 64, 0.05),
+                  transparent 25%
+          ),
+
+          linear-gradient(
+                  rgba(255, 244, 229, 0.96),
+                  rgba(255, 244, 229, 0.96)
+          );
+}
+
+
+/* =========================================================
+   SMALL TOP HEADING
+========================================================= */
+
+.fact-heading {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+.fact-heading-line {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+}
+
+
+.fact-heading-line p {
+  margin: 0;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  color: #4a3627;
+}
+
+
+/* Decorative lines around heading */
+
+.fact-heading-line span {
+  width: 45px;
+  height: 22px;
+
+  display: block;
+
+  border-bottom:
+          1px solid var(--brown);
+}
+
+
+.fact-heading-line span:first-child {
+  border-radius:
+          0 0 100% 0;
+
+  transform:
+          translateY(-8px)
+          rotate(-8deg);
+}
+
+
+.fact-heading-line span:last-child {
+  border-radius:
+          0 0 0 100%;
+
+  transform:
+          translateY(-8px)
+          rotate(8deg);
+}
+
+
+/* =========================================================
+   RANDOM FACT BUTTON
+========================================================= */
+
+.fact-random-button {
+  margin-top: 10px;
+
+  padding: 4px 14px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #5b4434;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition:
+          color 0.2s,
+          transform 0.2s;
+}
+
+
+.fact-random-button:hover {
+  color: #9b663a;
+
+  transform:
+          translateY(-1px);
+}
+
+
+/* =========================================================
+   FACT TEXT
+========================================================= */
+
+.fact-content {
+  max-width: 900px;
+
+  margin:
+          80px auto 0;
+}
+
+
+.fact-content h1 {
+  margin: 0;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size:
+          clamp(34px, 4vw, 52px);
+
+  font-weight: 600;
+
+  line-height: 1.1;
+
+  color: var(--ink);
+}
+
+
+.fact-content p {
+  max-width: 750px;
+
+  margin:
+          75px auto 0;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size: 22px;
+
+  line-height: 1.6;
+
+  color: #43352d;
+}
+
+
+/* =========================================================
+   DECORATIVE CORNERS
+========================================================= */
+
+.fact-decoration {
+  position: absolute;
+
+  bottom: 100px;
+
+  width: 120px;
+  height: 90px;
+
+  border-top:
+          1px solid var(--brown);
+}
+
+
+.fact-decoration-left {
+  left: 13%;
+
+  border-right:
+          1px solid var(--brown);
+
+  border-radius:
+          0 35px 0 0;
+}
+
+
+.fact-decoration-right {
+  right: 13%;
+
+  border-left:
+          1px solid var(--brown);
+
+  border-radius:
+          35px 0 0 0;
+}
+
+
+/* =========================================================
+   CUSTOM POSTER SECTION
+========================================================= */
+
+.fact-custom {
+  position: relative;
+
+  padding:
+          70px 7vw
+          90px;
+
+  background:
+          linear-gradient(
+                  rgba(255, 244, 229, 0.97),
+                  rgba(255, 244, 229, 0.97)
+          );
+
+  border-top:
+          1px solid var(--brown);
+}
+
+
+/* Slight curved effect */
+
+.fact-custom::before {
+  content: "";
+
+  position: absolute;
+
+  left: -5%;
+  right: -5%;
+
+  top: -28px;
+
+  height: 55px;
+
+  border-top:
+          1px solid var(--brown);
+
+  border-radius:
+          50%;
+}
+
+
+.fact-custom-inner {
+  width: min(
+          1150px,
+          100%
+  );
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+        1fr 0.7fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   CUSTOM TEXT
+========================================================= */
+
+.fact-custom-text {
+  max-width: 430px;
+}
+
+
+.fact-custom-text h2 {
+  margin:
+          0 0 5px;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size: 34px;
+
+  font-weight: 600;
+}
+
+
+.fact-custom-text p {
+  margin:
+          8px 0 22px;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size: 20px;
+
+  line-height: 1.35;
+}
+
+
+.fact-contact-link {
+  display: inline-block;
+
+  margin-top: 5px;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-weight: 700;
+
+  color: #8f542d;
+}
+
+
+/* =========================================================
+   MINI POSTER
+========================================================= */
+
+.fact-poster-preview {
+  display: flex;
+
+  justify-content: center;
+}
+
+
+.mini-poster {
+  width: 160px;
+
+  min-height: 215px;
+
+  background: white;
+
+  border:
+          1px solid #cfc4b4;
+
+  box-shadow:
+          0 8px 20px
+          rgba(0, 0, 0, 0.12);
+
+  transform:
+          rotate(0.5deg);
+}
+
+
+.mini-poster img {
+  width: 100%;
+
+  height: 75px;
+
+  object-fit: cover;
+}
+
+
+.mini-poster-space {
+  height: 140px;
+
+  background:
+          #ffffff;
+}
+
+
+/* =========================================================
+   FACT CHANGE ANIMATION
+========================================================= */
+
+.fact-content.fact-changing {
+  animation:
+          factChange 0.35s ease;
+}
+
+
+@keyframes factChange {
+
+  0% {
+    opacity: 0;
+    transform:
+            translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform:
+            translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .fact-hero {
+    min-height: 650px;
+
+    padding:
+            70px 30px;
+  }
+
+
+  .fact-custom-inner {
+    grid-template-columns:
+            1fr;
+
+    gap: 50px;
+
+    text-align: center;
+  }
+
+
+  .fact-custom-text {
+    margin: auto;
+  }
+
+
+  .fact-decoration-left {
+    left: 5%;
+  }
+
+
+  .fact-decoration-right {
+    right: 5%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .fact-hero {
+    min-height: 620px;
+
+    padding:
+            55px 20px;
+  }
+
+
+  .fact-heading-line {
+    gap: 10px;
+  }
+
+
+  .fact-heading-line span {
+    width: 25px;
+  }
+
+
+  .fact-heading-line p {
+    font-size: 15px;
+  }
+
+
+  .fact-content {
+    margin-top: 65px;
+  }
+
+
+  .fact-content h1 {
+    font-size: 36px;
+  }
+
+
+  .fact-content p {
+    margin-top: 50px;
+
+    font-size: 19px;
+  }
+
+
+  .fact-decoration {
+    width: 65px;
+    height: 65px;
+
+    bottom: 65px;
+  }
+
+
+  .fact-custom {
+    padding:
+            60px 20px;
+  }
+
+
+  .fact-custom-text h2 {
+    font-size: 30px;
+  }
+
+
+  .fact-custom-text p {
+    font-size: 18px;
   }
 
 }
