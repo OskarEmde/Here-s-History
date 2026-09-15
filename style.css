@@ -1291,13 +1291,13 @@ img {
 
 /* Switch button text */
 
-.dannebrog-demo[data-state="open"]
+.dannebrog-demo[data-state="open"],
 .closed-label {
   display:
           none;
 }
 
-.dannebrog-demo[data-state="open"]
+.dannebrog-demo[data-state="open"],
 .open-label {
   display:
           inline;
