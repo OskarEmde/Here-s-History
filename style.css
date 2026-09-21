@@ -2136,11 +2136,6 @@ img {
 
   top: -28px;
 
-  height: 55px;
-
-  border-top:
-          1px solid var(--brown);
-
   border-radius:
           50%;
 }
