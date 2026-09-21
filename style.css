@@ -1,0 +1,2404 @@
+/* =========================================================
+   01. BRAND COLORS / VARIABLES
+========================================================= */
+
+:root {
+  --black: #211c1c;
+  --brown: #ba8a52;
+  --cream: #fff4e5;
+  --gold: #f5cb40;
+  --red: #ba1526;
+
+  --ink: #241d1a;
+  --muted: #66584c;
+
+  --line: rgba(186, 138, 82, 0.45);
+
+  --shadow:
+          0 24px 70px rgba(24, 18, 14, 0.18);
+}
+
+
+
+/* =========================================================
+   02. RESET / GENERAL
+========================================================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+
+  background: var(--black);
+  color: var(--ink);
+
+  font-family:
+          Inter,
+          system-ui,
+          sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+
+/* =========================================================
+   03. HEADER
+========================================================= */
+
+.site-header {
+  height: 116px;
+
+  position: sticky;
+  top: 0;
+
+  z-index: 50;
+
+  display: grid;
+  grid-template-columns:
+    1fr auto 1fr;
+
+  align-items: center;
+
+  gap: 28px;
+
+  padding:
+          0 5vw;
+
+  background:
+          rgba(33, 28, 28, 0.97);
+
+  border-bottom:
+          1px solid var(--brown);
+
+  color:
+          var(--cream);
+
+  backdrop-filter:
+          blur(14px);
+}
+
+
+
+/* =========================================================
+   04. BRAND / LOGO
+========================================================= */
+
+.brand {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  width: max-content;
+}
+
+.brand img {
+  width: 100px;
+  height: 100px;
+
+  object-fit: contain;
+}
+
+.brand-name {
+  display: block;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-weight: 700;
+
+  font-size: 25px;
+
+  letter-spacing:
+          0.06em;
+
+  color:
+          #e9c98c;
+}
+
+.brand-tagline {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 9px;
+
+  letter-spacing:
+          0.38em;
+
+  color:
+          #d1b783;
+}
+
+
+
+/* =========================================================
+   05. NAVIGATION
+========================================================= */
+
+.main-nav {
+  display: flex;
+
+  align-items: center;
+
+  gap: 32px;
+}
+
+.main-nav a {
+  position: relative;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-weight: 600;
+
+  font-size: 17px;
+}
+
+
+/* Navigation underline */
+
+.main-nav a::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  right: 100%;
+
+  bottom: -12px;
+
+  height: 2px;
+
+  background:
+          var(--gold);
+
+  transition:
+          0.25s;
+}
+
+.main-nav a:hover::after,
+.main-nav a.active::after {
+  right: 0;
+}
+
+
+/* Header shop button */
+
+.site-header > .btn {
+  justify-self: end;
+}
+
+
+/* Mobile menu button */
+
+.menu-toggle {
+  display: none;
+
+  background:
+          none;
+
+  border:
+          0;
+
+  color:
+          white;
+
+  font-size:
+          26px;
+
+  cursor:
+          pointer;
+}
+
+
+
+/* =========================================================
+   06. BUTTONS
+========================================================= */
+
+.btn {
+  display:
+          inline-flex;
+
+  align-items:
+          center;
+
+  justify-content:
+          center;
+
+  gap:
+          14px;
+
+  padding:
+          15px 28px;
+
+  border-radius:
+          10px;
+
+  border:
+          1px solid transparent;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size:
+          18px;
+
+  font-weight:
+          700;
+
+  transition:
+          0.2s;
+
+  cursor:
+          pointer;
+}
+
+.btn:hover {
+  transform:
+          translateY(-2px);
+}
+
+
+/* Red button */
+
+.btn-red {
+  background:
+          var(--red);
+
+  color:
+          white;
+
+  border-color:
+          #e45b67;
+
+  box-shadow:
+          0 8px 24px
+          rgba(186, 21, 38, 0.18);
+}
+
+
+/* Outline button */
+
+.btn-outline {
+  background:
+          rgba(255, 244, 229, 0.7);
+
+  border-color:
+          var(--brown);
+}
+
+
+/* Small button */
+
+.btn-small {
+  padding:
+          11px 22px;
+
+  font-size:
+          16px;
+}
+
+
+
+/* =========================================================
+   07. PARCHMENT BACKGROUND
+========================================================= */
+
+.parchment-section {
+
+  background:
+
+          radial-gradient(
+                  circle at 18% 22%,
+                  rgba(186, 138, 82, 0.10),
+                  transparent 25%
+          ),
+
+          radial-gradient(
+                  circle at 80% 15%,
+                  rgba(245, 203, 64, 0.08),
+                  transparent 20%
+          ),
+
+          linear-gradient(
+                  0deg,
+                  rgba(255, 244, 229, 0.97),
+                  rgba(255, 244, 229, 0.97)
+          );
+}
+
+
+
+/* =========================================================
+   08. SHARED HEADINGS
+========================================================= */
+
+.eyebrow {
+  margin:
+          0 0 14px;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size:
+          14px;
+
+  font-weight:
+          700;
+
+  letter-spacing:
+          0.26em;
+
+  color:
+          #8d5431;
+}
+
+.eyebrow.light {
+  color:
+          #dfb976;
+}
+
+
+.hero h1,
+.mission h2,
+.products-section h2,
+.story-strip h2 {
+
+  margin:
+          0;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-weight:
+          700;
+
+  line-height:
+          0.93;
+}
+
+
+
+/* =========================================================
+   09. HERO SECTION
+========================================================= */
+
+.hero {
+  min-height:
+          690px;
+
+  display:
+          grid;
+
+  grid-template-columns:
+    0.9fr 1.15fr;
+
+  gap:
+          55px;
+
+  align-items:
+          center;
+
+  padding:
+          64px 6vw 50px;
+
+  border-bottom:
+          1px solid var(--brown);
+
+  overflow:
+          hidden;
+}
+
+
+/* Hero heading */
+
+.hero h1 {
+  font-size:
+          clamp(52px, 6vw, 88px);
+
+  letter-spacing:
+          -0.035em;
+}
+
+.hero h1 span {
+  color:
+          #8f542d;
+}
+
+
+/* Hero text */
+
+.lead {
+  max-width:
+          650px;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size:
+          23px;
+
+  line-height:
+          1.4;
+}
+
+
+/* Hero buttons */
+
+.hero-actions {
+  display:
+          flex;
+
+  gap:
+          14px;
+
+  margin:
+          28px 0 26px;
+}
+
+
+/* Audience information */
+
+.audiences {
+  display:
+          flex;
+
+  flex-wrap:
+          wrap;
+
+  gap:
+          24px;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size:
+          16px;
+}
+
+
+/* Quote */
+
+.hero blockquote {
+  max-width:
+          490px;
+
+  margin:
+          30px 0 0;
+
+  padding-left:
+          18px;
+
+  border-left:
+          2px solid var(--brown);
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-style:
+          italic;
+
+  font-size:
+          21px;
+
+  color:
+          #6c5240;
+}
+
+
+
+/* =========================================================
+   10. HERO IMAGE
+========================================================= */
+
+.hero-visual {
+  position:
+          relative;
+}
+
+.hero-frame {
+  padding:
+          17px;
+
+  background:
+          #171414;
+
+  border:
+          4px solid #2b2320;
+
+  box-shadow:
+          var(--shadow);
+
+}
+
+.hero-frame img {
+  width:
+          100%;
+
+  aspect-ratio:
+          1.42 / 1;
+
+  object-fit:
+          cover;
+
+  border:
+          1px solid #a67842;
+}
+
+
+
+/* Hero round badge */
+
+.hero-badge {
+  position:
+          absolute;
+
+  top:
+          -44px;
+
+  right:
+          -40px;
+
+  width:
+          168px;
+
+  height:
+          168px;
+
+  border-radius:
+          50%;
+
+  display:
+          grid;
+
+  place-content:
+          center;
+
+  text-align:
+          center;
+
+  background:
+          #8c5c2e;
+
+  color:
+          #fff7e8;
+
+  border:
+          2px solid #d8a65f;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size:
+          17px;
+
+  line-height:
+          1.2;
+
+  letter-spacing:
+          0.08em;
+
+  box-shadow:
+          0 14px 30px
+          rgba(0, 0, 0, 0.2);
+}
+
+.hero-badge span {
+  display:
+          block;
+
+  margin-top:
+          10px;
+
+  font-size:
+          11px;
+}
+
+
+
+/* =========================================================
+   11. BENEFITS SECTION
+========================================================= */
+
+.benefits {
+  display:
+          grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  max-width:
+          1400px;
+
+  margin:
+          auto;
+
+  color:
+          #f9eddc;
+}
+
+.benefits article {
+  padding:
+          38px 28px;
+
+  text-align:
+          center;
+
+  border-right:
+          1px solid rgba(186, 138, 82, 0.45);
+}
+
+.benefits article:last-child {
+  border-right:
+          0;
+}
+
+
+
+/* Benefit icon */
+
+.icon {
+  width:
+          72px;
+
+  height:
+          72px;
+
+  margin:
+          0 auto 14px;
+
+  display:
+          grid;
+
+  place-content:
+          center;
+
+  border:
+          2px solid var(--brown);
+
+  border-radius:
+          50%;
+
+  font-size:
+          30px;
+
+  color:
+          var(--gold);
+}
+
+
+.benefits h3 {
+  margin:
+          0 0 6px;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size:
+          27px;
+}
+
+.benefits p {
+  margin:
+          0;
+
+  color:
+          #cabdaf;
+}
+
+
+
+/* =========================================================
+   12. MISSION / ABOUT SECTION
+========================================================= */
+
+.mission {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  display: grid;
+
+  /* Venstre = plads til billedet
+     Midten = mission tekst
+     Højre = mission points */
+  grid-template-columns: 0.55fr 1fr 0.85fr;
+
+  gap: 45px;
+  align-items: center;
+
+  min-height: 430px;
+
+  padding: 72px 6vw;
+
+  border-top: 1px solid var(--brown);
+  border-bottom: 1px solid var(--brown);
+}
+
+.mission-copy {
+  grid-column: 2;
+}
+
+.mission-points {
+  grid-column: 3;
+
+  padding-left: 35px;
+
+  border-left: 1px solid var(--line);
+}
+
+
+/* Full-width background banner */
+
+.mission::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: -2;
+
+  background-image:
+          linear-gradient(
+                  90deg,
+                  rgba(255, 244, 229, 0.12) 0%,
+                  rgba(255, 244, 229, 0.45) 32%,
+                  rgba(255, 244, 229, 0.78) 55%,
+                  rgba(255, 244, 229, 0.88) 100%
+          ),
+          url("assets/mission-image.png");
+
+  background-repeat: no-repeat;
+
+  background-size: cover;
+
+  background-position: left center;
+}
+
+
+/* Extra soft texture / glow */
+.mission::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+          radial-gradient(
+                  circle at 12% 35%,
+                  rgba(186, 138, 82, 0.10),
+                  transparent 22%
+          ),
+          radial-gradient(
+                  circle at 84% 18%,
+                  rgba(245, 203, 64, 0.08),
+                  transparent 18%
+          );
+}
+
+
+.mission h2,
+.products-section h2,
+.story-strip h2 {
+  font-size: clamp(42px, 4vw, 62px);
+}
+
+.mission-copy p:last-child {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 21px;
+  line-height: 1.45;
+  max-width: 760px;
+}
+
+
+/* Mission points */
+.mission-points {
+  padding-left: 35px;
+  border-left: 1px solid var(--line);
+}
+
+.mission-points div {
+  display: grid;
+  gap: 4px;
+  margin: 18px 0;
+}
+
+.mission-points strong {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 20px;
+}
+
+.mission-points span {
+  color: #715f52;
+}
+
+
+
+/* =========================================================
+   13. PRODUCTS SECTION
+========================================================= */
+
+.products-section {
+  padding:
+          72px 6vw 80px;
+
+  color:
+          #f8ead8;
+
+  background:
+          linear-gradient(
+                  180deg,
+                  #211c1c,
+                  #171313
+          );
+}
+
+
+
+/* Product heading */
+
+.section-heading {
+  max-width:
+          1500px;
+
+  margin:
+          0 auto 32px;
+
+  display:
+          flex;
+
+  justify-content:
+          space-between;
+
+  align-items:
+          end;
+
+  gap:
+          30px;
+}
+
+.section-intro {
+  max-width:
+          460px;
+
+  color:
+          #cdbdab;
+
+  line-height:
+          1.6;
+}
+
+
+
+/* Product grid */
+
+.product-grid {
+  max-width:
+          1500px;
+
+  margin:
+          auto;
+
+  display:
+          grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:
+          30px;
+}
+
+
+
+/* Product card */
+
+.product-card {
+  overflow:
+          hidden;
+
+  background:
+          #2a2321;
+
+  border:
+          1px solid rgba(186, 138, 82, 0.45);
+
+  box-shadow:
+          0 20px 50px
+          rgba(0, 0, 0, 0.22);
+}
+
+.product-card.featured {
+  border-color:
+          #d1a05d;
+}
+
+
+
+/* Product image */
+
+.product-media {
+  position:
+          relative;
+
+  overflow:
+          hidden;
+
+  aspect-ratio:
+          16 / 10;
+
+  background:
+          #0d0d0d;
+}
+
+.product-media img {
+  width:
+          100%;
+
+  height:
+          100%;
+
+  object-fit:
+          cover;
+}
+
+
+
+/* Product label */
+
+.product-chip {
+  position:
+          absolute;
+
+  left:
+          18px;
+
+  top:
+          18px;
+
+  padding:
+          8px 11px;
+
+  background:
+          rgba(33, 28, 28, 0.9);
+
+  border:
+          1px solid var(--brown);
+
+  color:
+          #f1c97a;
+
+  font-size:
+          11px;
+
+  font-weight:
+          700;
+
+  letter-spacing:
+          0.16em;
+}
+
+
+
+/* Product information */
+
+.product-info {
+  padding:
+          26px;
+}
+
+.product-kicker {
+  color:
+          #d5aa6b;
+
+  font-size:
+          11px;
+
+  font-weight:
+          700;
+
+  letter-spacing:
+          0.2em;
+}
+
+.product-info h3 {
+  margin:
+          8px 0;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size:
+          34px;
+}
+
+.product-info > p:not(.product-kicker) {
+  color:
+          #cdbfb2;
+
+  line-height:
+          1.6;
+}
+
+
+
+/* Product bottom */
+
+.product-bottom {
+  display:
+          flex;
+
+  align-items:
+          center;
+
+  justify-content:
+          space-between;
+
+  margin-top:
+          25px;
+
+  padding-top:
+          18px;
+
+  border-top:
+          1px solid rgba(186, 138, 82, 0.3);
+}
+
+.product-bottom strong {
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size:
+          25px;
+
+  color:
+          #f3ce84;
+}
+
+.text-link {
+  border:
+          0;
+
+  background:
+          none;
+
+  color:
+          #f6e4ca;
+
+  cursor:
+          pointer;
+
+  font-weight:
+          700;
+}
+
+
+
+/* =========================================================
+   14. DANNEBROG INTERACTIVE PRODUCT
+========================================================= */
+
+.dannebrog-demo {
+  cursor:
+          pointer;
+}
+
+
+/* Both images */
+
+.dannebrog-img {
+  position:
+          absolute;
+
+  inset:
+          0;
+
+  transition:
+          opacity 0.55s ease,
+          transform 0.7s ease;
+}
+
+
+
+/* Historical image hidden by default */
+
+.dannebrog-img.past {
+  opacity:
+          0;
+
+  transform:
+          scale(1.04);
+}
+
+
+
+/* Historical image when opened */
+
+.dannebrog-demo[data-state="open"] .past {
+  opacity:
+          1;
+
+  transform:
+          scale(1);
+}
+
+
+
+/* Current image when opened */
+
+.dannebrog-demo[data-state="open"] .now {
+  opacity:
+          0;
+
+  transform:
+          scale(0.98);
+}
+
+
+
+/* Overlay */
+
+.fold-overlay {
+  position:
+          absolute;
+
+  inset:
+          0;
+
+  pointer-events:
+          none;
+}
+
+
+
+/* Center fold line */
+
+.fold-line {
+  position:
+          absolute;
+
+  left:
+          50%;
+
+  top:
+          0;
+
+  bottom:
+          0;
+
+  width:
+          1px;
+
+  background:
+          linear-gradient(
+                  transparent,
+                  rgba(255, 255, 255, 0.7),
+                  transparent
+          );
+
+  opacity:
+          0.55;
+}
+
+
+
+/* Open / close button */
+
+.fold-toggle {
+  pointer-events:
+          auto;
+
+  position:
+          absolute;
+
+  left:
+          50%;
+
+  bottom:
+          20px;
+
+  transform:
+          translateX(-50%);
+
+  padding:
+          11px 18px;
+
+  border:
+          1px solid #d5aa6b;
+
+  border-radius:
+          999px;
+
+  background:
+          rgba(33, 28, 28, 0.88);
+
+  color:
+          #fff4e5;
+
+  cursor:
+          pointer;
+
+  box-shadow:
+          0 7px 24px
+          rgba(0, 0, 0, 0.28);
+}
+
+
+
+/* Open text hidden initially */
+
+.open-label {
+  display:
+          none;
+}
+
+
+
+/* Switch button text */
+
+.dannebrog-demo[data-state="open"],
+.closed-label {
+  display:
+          none;
+}
+
+.dannebrog-demo[data-state="open"],
+.open-label {
+  display:
+          inline;
+}
+
+
+
+/* Interaction information */
+
+.interaction-note {
+  margin-top:
+          16px;
+
+  padding:
+          12px 14px;
+
+  border-left:
+          2px solid var(--gold);
+
+  background:
+          rgba(245, 203, 64, 0.06);
+
+  color:
+          #e5cfaa;
+
+  font-size:
+          14px;
+}
+
+
+
+/* =========================================================
+   15. HOW IT WORKS SECTION
+========================================================= */
+
+.story-strip {
+  padding:
+          72px 6vw;
+}
+
+.story-strip > .eyebrow,
+.story-strip > h2 {
+  text-align:
+          center;
+}
+
+
+
+/* Steps */
+
+.steps {
+  max-width:
+          1200px;
+
+  margin:
+          40px auto 0;
+
+  display:
+          grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap:
+          20px;
+}
+
+.steps > div {
+  padding:
+          30px;
+
+  border:
+          1px solid var(--line);
+
+  background:
+          rgba(255, 255, 255, 0.25);
+}
+
+
+
+/* Step numbers */
+
+.steps span {
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size:
+          48px;
+
+  color:
+          #c48e53;
+}
+
+
+
+.steps h3 {
+  margin:
+          8px 0;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size:
+          27px;
+}
+
+.steps p {
+  color:
+          #6a594d;
+
+  line-height:
+          1.6;
+}
+
+
+
+/* =========================================================
+   16. FOOTER
+========================================================= */
+
+.footer {
+  display:
+          grid;
+
+  grid-template-columns:
+    1fr auto;
+
+  gap:
+          25px;
+
+  padding:
+          35px 6vw;
+
+  background:
+          #171313;
+
+  color:
+          #d9cbbb;
+
+  border-top:
+          1px solid var(--brown);
+}
+
+
+
+/* Footer logo */
+
+.footer-brand {
+  display:
+          flex;
+
+  align-items:
+          center;
+
+  gap:
+          12px;
+}
+
+.footer-brand img {
+  width:
+          62px;
+
+  height:
+          62px;
+
+  object-fit:
+          contain;
+}
+
+.footer-brand strong {
+  display:
+          block;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size:
+          22px;
+
+  color:
+          #e4bd7c;
+}
+
+.footer-brand span {
+  font-size:
+          8px;
+
+  letter-spacing:
+          0.28em;
+}
+
+
+
+/* Footer navigation */
+
+.footer nav {
+  display:
+          flex;
+
+  align-items:
+          center;
+
+  gap:
+          22px;
+}
+
+
+
+/* Copyright */
+
+.footer p {
+  grid-column:
+          1 / -1;
+
+  padding-top:
+          20px;
+
+  border-top:
+          1px solid rgba(186, 138, 82, 0.25);
+
+  font-size:
+          12px;
+
+  color:
+          #94877f;
+}
+
+
+
+/* =========================================================
+   17. SCROLL ANIMATIONS
+========================================================= */
+
+.reveal {
+  opacity:
+          0;
+
+  transform:
+          translateY(18px);
+
+  transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+}
+
+.reveal.is-visible {
+  opacity:
+          1;
+
+  transform:
+          none;
+}
+
+
+
+/* =========================================================
+   18. TABLET RESPONSIVE
+========================================================= */
+
+@media (max-width: 1050px) {
+
+
+  /* Header */
+
+  .site-header {
+    grid-template-columns:
+      1fr auto;
+  }
+
+
+  /* Mobile navigation */
+
+  .main-nav {
+    position:
+            absolute;
+
+    top:
+            96px;
+
+    left:
+            0;
+
+    right:
+            0;
+
+    display:
+            none;
+
+    flex-direction:
+            column;
+
+    padding:
+            24px;
+
+    background:
+            #211c1c;
+
+    border-bottom:
+            1px solid var(--brown);
+  }
+
+  .main-nav.open {
+    display:
+            flex;
+  }
+
+
+  /* Hide shop button */
+
+  .site-header > .btn {
+    display:
+            none;
+  }
+
+
+  /* Show mobile button */
+
+  .menu-toggle {
+    display:
+            block;
+
+    justify-self:
+            end;
+  }
+
+
+  /* Hero */
+
+  .hero {
+    grid-template-columns:
+      1fr;
+
+    padding-top:
+            45px;
+  }
+
+  .hero-visual {
+    max-width:
+            850px;
+  }
+
+
+  /* Mission */
+
+  .mission {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .mission-copy,
+  .mission-points {
+    grid-column: auto;
+  }
+
+  .mission-points {
+    padding-left: 0;
+    border-left: 0;
+  }
+}
+
+
+  /* Products */
+
+  .product-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+
+
+
+/* =========================================================
+   19. MOBILE RESPONSIVE
+========================================================= */
+
+@media (max-width: 700px) {
+
+
+  /* Header */
+
+  .site-header {
+    height:
+            78px;
+
+    padding:
+            0 20px;
+  }
+
+
+  .brand img {
+    width:
+            55px;
+
+    height:
+            55px;
+  }
+
+  .brand-name {
+    font-size:
+            18px;
+  }
+
+  .brand-tagline {
+    font-size:
+            7px;
+  }
+
+  .main-nav {
+    top:
+            78px;
+  }
+
+
+
+  /* Hero */
+
+  .hero {
+    padding:
+            38px 20px;
+  }
+
+  .hero h1 {
+    font-size:
+            50px;
+  }
+
+  .lead {
+    font-size:
+            20px;
+  }
+
+
+
+  /* Badge */
+
+  .hero-badge {
+    width:
+            120px;
+
+    height:
+            120px;
+
+    right:
+            -8px;
+
+    top:
+            -26px;
+
+    font-size:
+            13px;
+  }
+
+
+
+  /* Hero buttons */
+
+  .hero-actions {
+    flex-direction:
+            column;
+
+    align-items:
+            stretch;
+  }
+
+  .btn {
+    width:
+            100%;
+  }
+
+
+
+  /* Benefits */
+
+  .benefits {
+    grid-template-columns:
+      1fr;
+  }
+
+  .benefits article {
+    border-right:
+            0;
+
+    border-bottom:
+            1px solid rgba(186, 138, 82, 0.35);
+  }
+
+
+
+  /* General section spacing */
+
+  .mission,
+  .products-section,
+  .story-strip {
+    padding-left:
+            20px;
+
+    padding-right:
+            20px;
+  }
+
+
+
+  /* Products heading */
+
+  .section-heading {
+    display:
+            block;
+  }
+
+  .section-intro {
+    margin-top:
+            12px;
+  }
+
+  .product-info h3 {
+    font-size:
+            29px;
+  }
+
+
+
+  /* Steps */
+
+  .steps {
+    grid-template-columns:
+      1fr;
+  }
+
+
+
+  /* Footer */
+
+  .footer {
+    grid-template-columns:
+      1fr;
+  }
+
+  .footer nav {
+    flex-wrap:
+            wrap;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/* =========================================================
+   FACT OF THE DAY PAGE
+========================================================= */
+
+.fact-page {
+  background: var(--black);
+}
+
+
+/* =========================================================
+   MAIN FACT AREA
+========================================================= */
+
+.fact-main {
+  background: var(--cream);
+}
+
+
+/* Main fact section */
+
+.fact-hero {
+  position: relative;
+
+  min-height: 760px;
+
+  padding:
+          95px 7vw
+          100px;
+
+  overflow: hidden;
+
+  text-align: center;
+
+  background:
+          radial-gradient(
+                  circle at 15% 20%,
+                  rgba(186, 138, 82, 0.08),
+                  transparent 28%
+          ),
+
+          radial-gradient(
+                  circle at 85% 30%,
+                  rgba(245, 203, 64, 0.05),
+                  transparent 25%
+          ),
+
+          linear-gradient(
+                  rgba(255, 244, 229, 0.96),
+                  rgba(255, 244, 229, 0.96)
+          );
+}
+
+
+/* =========================================================
+   SMALL TOP HEADING
+========================================================= */
+
+.fact-heading {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+.fact-heading-line {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 18px;
+}
+
+
+.fact-heading-line p {
+  margin: 0;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size: 18px;
+
+  font-weight: 600;
+
+  color: #4a3627;
+}
+
+
+/* Decorative lines around heading */
+
+.fact-heading-line span {
+  width: 45px;
+  height: 22px;
+
+  display: block;
+
+  border-bottom:
+          1px solid var(--brown);
+}
+
+
+.fact-heading-line span:first-child {
+  border-radius:
+          0 0 100% 0;
+
+  transform:
+          translateY(-8px)
+          rotate(-8deg);
+}
+
+
+.fact-heading-line span:last-child {
+  border-radius:
+          0 0 0 100%;
+
+  transform:
+          translateY(-8px)
+          rotate(8deg);
+}
+
+
+/* =========================================================
+   RANDOM FACT BUTTON
+========================================================= */
+
+.fact-random-button {
+  margin-top: 10px;
+
+  padding: 4px 14px;
+
+  border: 0;
+
+  background: transparent;
+
+  color: #5b4434;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size: 15px;
+
+  cursor: pointer;
+
+  transition:
+          color 0.2s,
+          transform 0.2s;
+}
+
+
+.fact-random-button:hover {
+  color: #9b663a;
+
+  transform:
+          translateY(-1px);
+}
+
+
+/* =========================================================
+   FACT TEXT
+========================================================= */
+
+.fact-content {
+  max-width: 900px;
+
+  margin:
+          80px auto 0;
+}
+
+
+.fact-content h1 {
+  margin: 0;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size:
+          clamp(34px, 4vw, 52px);
+
+  font-weight: 600;
+
+  line-height: 1.1;
+
+  color: var(--ink);
+}
+
+
+.fact-content p {
+  max-width: 750px;
+
+  margin:
+          75px auto 0;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size: 22px;
+
+  line-height: 1.6;
+
+  color: #43352d;
+}
+
+
+/* =========================================================
+   DECORATIVE CORNERS
+========================================================= */
+
+.fact-decoration {
+  position: absolute;
+
+  bottom: 100px;
+
+  width: 120px;
+  height: 90px;
+
+  border-top:
+          1px solid var(--brown);
+}
+
+
+.fact-decoration-left {
+  left: 13%;
+
+  border-right:
+          1px solid var(--brown);
+
+  border-radius:
+          0 35px 0 0;
+}
+
+
+.fact-decoration-right {
+  right: 13%;
+
+  border-left:
+          1px solid var(--brown);
+
+  border-radius:
+          35px 0 0 0;
+}
+
+
+/* =========================================================
+   CUSTOM POSTER SECTION
+========================================================= */
+
+.fact-custom {
+  position: relative;
+
+  padding:
+          70px 7vw
+          90px;
+
+  background:
+          linear-gradient(
+                  rgba(255, 244, 229, 0.97),
+                  rgba(255, 244, 229, 0.97)
+          );
+
+  border-top:
+          1px solid var(--brown);
+}
+
+
+/* Slight curved effect */
+
+.fact-custom::before {
+  content: "";
+
+  position: absolute;
+
+  left: -5%;
+  right: -5%;
+
+  top: -28px;
+
+  height: 55px;
+
+  border-top:
+          1px solid var(--brown);
+
+  border-radius:
+          50%;
+}
+
+
+.fact-custom-inner {
+  width: min(
+          1150px,
+          100%
+  );
+
+  margin: auto;
+
+  display: grid;
+
+  grid-template-columns:
+        1fr 0.7fr;
+
+  gap: 80px;
+
+  align-items: center;
+}
+
+
+/* =========================================================
+   CUSTOM TEXT
+========================================================= */
+
+.fact-custom-text {
+  max-width: 430px;
+}
+
+
+.fact-custom-text h2 {
+  margin:
+          0 0 5px;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size: 34px;
+
+  font-weight: 600;
+}
+
+
+.fact-custom-text p {
+  margin:
+          8px 0 22px;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-size: 20px;
+
+  line-height: 1.35;
+}
+
+
+.fact-contact-link {
+  display: inline-block;
+
+  margin-top: 5px;
+
+  font-family:
+          "Cormorant Garamond",
+          serif;
+
+  font-weight: 700;
+
+  color: #8f542d;
+}
+
+
+/* =========================================================
+   MINI POSTER
+========================================================= */
+
+.fact-poster-preview {
+  display: flex;
+
+  justify-content: center;
+}
+
+
+.mini-poster {
+  width: 160px;
+
+  min-height: 215px;
+
+  background: white;
+
+  border:
+          1px solid #cfc4b4;
+
+  box-shadow:
+          0 8px 20px
+          rgba(0, 0, 0, 0.12);
+
+  transform:
+          rotate(0.5deg);
+}
+
+
+.mini-poster img {
+  width: 100%;
+
+  height: 75px;
+
+  object-fit: cover;
+}
+
+
+.mini-poster-space {
+  height: 140px;
+
+  background:
+          #ffffff;
+}
+
+
+/* =========================================================
+   FACT CHANGE ANIMATION
+========================================================= */
+
+.fact-content.fact-changing {
+  animation:
+          factChange 0.35s ease;
+}
+
+
+@keyframes factChange {
+
+  0% {
+    opacity: 0;
+    transform:
+            translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform:
+            translateY(0);
+  }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .fact-hero {
+    min-height: 650px;
+
+    padding:
+            70px 30px;
+  }
+
+
+  .fact-custom-inner {
+    grid-template-columns:
+            1fr;
+
+    gap: 50px;
+
+    text-align: center;
+  }
+
+
+  .fact-custom-text {
+    margin: auto;
+  }
+
+
+  .fact-decoration-left {
+    left: 5%;
+  }
+
+
+  .fact-decoration-right {
+    right: 5%;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .fact-hero {
+    min-height: 620px;
+
+    padding:
+            55px 20px;
+  }
+
+
+  .fact-heading-line {
+    gap: 10px;
+  }
+
+
+  .fact-heading-line span {
+    width: 25px;
+  }
+
+
+  .fact-heading-line p {
+    font-size: 15px;
+  }
+
+
+  .fact-content {
+    margin-top: 65px;
+  }
+
+
+  .fact-content h1 {
+    font-size: 36px;
+  }
+
+
+  .fact-content p {
+    margin-top: 50px;
+
+    font-size: 19px;
+  }
+
+
+  .fact-decoration {
+    width: 65px;
+    height: 65px;
+
+    bottom: 65px;
+  }
+
+
+  .fact-custom {
+    padding:
+            60px 20px;
+  }
+
+
+  .fact-custom-text h2 {
+    font-size: 30px;
+  }
+
+
+  .fact-custom-text p {
+    font-size: 18px;
+  }
+
+}

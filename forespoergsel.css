@@ -1,0 +1,31 @@
+/* Forespørgselskurv: kan bruges sammen med style.css og undersider.css */
+.inquiry-nav {white-space:nowrap;gap:8px}
+.cart-count {display:inline-grid;place-items:center;min-width:24px;height:24px;padding:0 5px;border-radius:30px;background:#fff4e5;color:#211c1c;font:700 12px Inter,sans-serif}
+.mobile-inquiry-link {display:none}
+.inquiry-hero {text-align:center;padding:75px 20px 65px}
+.inquiry-hero h1 {margin:0;font:700 clamp(46px,6vw,78px)/1 'Cormorant Garamond',serif}
+.inquiry-hero>p:last-child {max-width:700px;margin:22px auto 0;line-height:1.7;color:#66584c}
+.inquiry-layout {display:grid;grid-template-columns:1fr 1fr;gap:28px;max-width:1300px;margin:auto;padding:65px 5vw 95px;color:#fff4e5}
+.inquiry-panel {background:#2a2321;border:1px solid rgba(186,138,82,.55);padding:clamp(22px,3vw,38px);min-width:0}
+.inquiry-panel h2 {font:700 clamp(32px,3vw,44px) 'Cormorant Garamond',serif;margin:0 0 22px;color:#f5cb40}
+.inquiry-item {display:grid;grid-template-columns:82px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid rgba(186,138,82,.35)}
+.inquiry-item img {width:82px;height:95px;object-fit:cover;border:1px solid #ba8a52}
+.inquiry-item h3 {font:700 24px 'Cormorant Garamond',serif;margin:0 0 8px}
+.inquiry-item p {color:#cfbeac;margin:0 0 12px}
+.quantity-controls {display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.quantity-controls button {background:#211c1c;border:1px solid #ba8a52;color:#fff4e5;min-width:34px;min-height:34px;cursor:pointer;border-radius:5px}
+.quantity-controls .remove-item {border:0;text-decoration:underline;background:none;color:#f2c77e;padding:0 5px}
+.inquiry-summary {margin:25px 0;font-weight:700;color:#f5cb40;line-height:1.7}
+.inquiry-back {color:#f5cb40;text-decoration:underline}
+.inquiry-help {color:#cdbfb2;line-height:1.6;font-size:14px}
+#inquiry-form {display:grid;gap:10px}
+#inquiry-form label {font-weight:600;margin-top:8px}
+#inquiry-form input,#inquiry-form textarea {width:100%;background:#fff4e5;border:1px solid #ba8a52;border-radius:6px;padding:13px;font:inherit;color:#211c1c}
+#inquiry-form button {margin-top:18px;justify-self:start}
+#inquiry-form button:disabled {opacity:.5;cursor:not-allowed}
+.empty-inquiry {line-height:1.6;color:#cdbfb2}
+.add-to-inquiry {text-align:right}
+@media(max-width:1050px){.main-nav .mobile-inquiry-link{display:flex;align-items:center;gap:5px}.mobile-inquiry-link .cart-count{min-width:20px;height:20px}}
+@media(max-width:800px){.inquiry-layout{grid-template-columns:1fr;padding:40px 20px 70px}.inquiry-hero{padding:50px 20px}.inquiry-nav{font-size:12px;padding:9px 10px}}
+
+.main-nav a[aria-current="page"]::after {right:0}

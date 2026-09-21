@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Saml de plakater, du er interesseret i, og send en uforpligtende forespørgsel til Here's History.">
+  <title>Forespørgselskurv | Here's History</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="undersider.css">
+  <link rel="stylesheet" href="forespoergsel.css">
+  <script src="script.js" defer></script>
+  <script src="forespoergsel.js" defer></script>
+</head>
+<body class="subpage inquiry-page">
+<header class="site-header" id="top">
+  <a class="brand" href="index.html" aria-label="Here's History forside">
+    <img src="assets/logo.png" alt="Here's History logo">
+    <div><span class="brand-name">HERE'S HISTORY</span><span class="brand-tagline">HISTORY LIVES HERE</span></div>
+  </a>
+  <button class="menu-toggle" type="button" aria-label="Åbn menu" aria-expanded="false" aria-controls="main-navigation">☰</button>
+  <nav class="main-nav" id="main-navigation" aria-label="Primær navigation">
+    <a href="index.html">Forside</a>
+    <a href="produkt.html">Produkter</a>
+    <a href="index.html#how">Sådan virker det</a>
+    <a href="omos.html">Om os</a>
+    <a href="fact.html">Fact of the day</a>
+    <a class="mobile-inquiry-link" href="forespoergsel.html" aria-current="page">Forespørgselskurv (<span class="cart-count">0</span>)</a>
+  </nav>
+  <a class="btn btn-red btn-small inquiry-nav" href="forespoergsel.html" aria-current="page">Forespørgselskurv <span aria-hidden="true">🛒</span> <span class="cart-count" aria-label="Antal produkter">0</span></a>
+</header>
+<main>
+  <section class="inquiry-hero parchment-section">
+    <p class="eyebrow">UFORPLIGTENDE FORESPØRGSEL</p>
+    <h1>Din forespørgselskurv</h1>
+    <p>Vælg plakater, tilpas antallet, og send os din forespørgsel. Der er ingen betaling eller bindende bestilling her.</p>
+  </section>
+  <section class="inquiry-layout" aria-label="Forespørgsel">
+    <div class="inquiry-panel">
+      <h2>Valgte plakater</h2>
+      <div id="inquiry-items" aria-live="polite"></div>
+      <div class="inquiry-summary" id="inquiry-summary"></div>
+      <a class="inquiry-back" href="produkt.html">← Se flere plakater</a>
+    </div>
+    <div class="inquiry-panel">
+      <h2>Kontaktoplysninger</h2>
+      <p class="inquiry-help">Vi bruger oplysningerne til at besvare din forespørgsel. Din e-mail åbnes med en færdig besked, som du selv sender.</p>
+      <form id="inquiry-form">
+        <label for="inquiry-name">Navn *</label>
+        <input id="inquiry-name" name="name" autocomplete="name" maxlength="100" required>
+        <label for="inquiry-email">E-mail *</label>
+        <input id="inquiry-email" name="email" type="email" autocomplete="email" maxlength="150" required>
+        <label for="inquiry-phone">Telefon (valgfrit)</label>
+        <input id="inquiry-phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
+        <label for="inquiry-message">Din besked (valgfrit)</label>
+        <textarea id="inquiry-message" name="message" rows="5" maxlength="2000" placeholder="Har du spørgsmål til plakaterne?"></textarea>
+        <button class="btn btn-red" type="submit" id="send-inquiry">Åbn e-mail med forespørgsel →</button>
+        <p class="inquiry-help" id="inquiry-status" role="status">Dette sender ikke automatisk en e-mail. Du skal trykke Send i dit mailprogram.</p>
+      </form>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="footer-brand"><img src="assets/logo.png" alt="Here's History logo"><div><strong>HERE'S HISTORY</strong><span>HISTORY LIVES HERE</span></div></div>
+  <nav aria-label="Footer navigation"><a href="index.html">Forside</a><a href="produkt.html">Produkter</a><a href="index.html#how">Sådan virker det</a><a href="omos.html">Om os</a></nav>
+  <p>© 2026 Here's History. Alle rettigheder forbeholdes.</p>
+</footer>
+</body>
+</html>
