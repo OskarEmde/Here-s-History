@@ -364,7 +364,48 @@ const historyFacts = [
 
         text:
             "Den anglo-zanzibarske krig i 1896 varede omkring 40 minutter og regnes ofte for den korteste registrerede krig i historien."
+    },
+   
+    {
+        title:
+            "I 1851 blev de første offentlige toiletter med skyl vist frem",
+
+        text:
+            "Ved verdensudstillingen i London i 1851 blev de første offentlige toiletter med skyl vist frem og kunne benyttes af de besøgende mod betaling. For en pris på 1 penny."
+    },
+
+    {
+        title:
+            "Pavelig modstand mod jernbaner",
+
+        text:
+            "Da jernbaneskinnerne, og de damplokomotiver, skinnerne betjente, begyndte at brede sig fra England, var alle ikke lige begejstrede. Blandt de mere kritiske stemmer fandt man pave Gregor 16., der erklærede jernbanen vejen til helvede og kvitterede med et forbud mod at etablere jernbaner i hele det område, der udgjorde Pavestaten."
+    },
+
+    {
+        title:
+            "At forsøge at smugle en morgenstjerne med ind i fængslet",
+
+        text:
+            "I 1993 forsøgte en nyankommen fange at smugle en morgenstjerne ind i Horsens Statsfængsel. Det lykkedes dog for betjentene at opdage det vilde våben ved indsættelsesproceduren. Hvad morgenstjernen skulle bruges til, eller hvor fangen havde forsøgt at gemme den, ved vi desværre ikke."
+    },
+
+    {
+        title:
+            "Under forbudstiden i 1920érnes USA forgiftede den amerikanske regering bogstaveligt talt alkohol.",
+
+        text:
+            "Da folk fortsatte med at indtage alkohol på trods af forbudet, blev nogle embedsmænd frustrerede og besluttede at prøve en anden form for afskrækkelse – død. De beordrede forgiftning af industrielle alkoholer fremstillet i USA, som var produkter, der regelmæssigt blev stjålet af spritsmuglere."
+    },
+
+    {
+        title:
+            "Paven der blev smidt ud af et vindue",
+
+        text:
+            "Det i dag en berømt fortælling om en pave der, den 14. maj 964, blev grebet i sengen med en gift kvinde. Den rasende ægtemand greb paven og kastede ham ud af vinduet (en såkaldt defenestrering), hvilket paven døde af."
     }
+
 
 ];
 
