@@ -2124,23 +2124,6 @@ img {
 }
 
 
-/* Slight curved effect */
-
-.fact-custom::before {
-  content: "";
-
-  position: absolute;
-
-  left: -5%;
-  right: -5%;
-
-  top: -28px;
-
-  border-radius:
-          50%;
-}
-
-
 .fact-custom-inner {
   width: min(
           1150px,
