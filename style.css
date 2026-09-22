@@ -400,7 +400,7 @@ img {
           700;
 
   line-height:
-          0.93;
+          1.12;
 }
 
 
@@ -1291,14 +1291,12 @@ img {
 
 /* Switch button text */
 
-.dannebrog-demo[data-state="open"],
-.closed-label {
+.dannebrog-demo[data-state="open"] .closed-label {
   display:
           none;
 }
 
-.dannebrog-demo[data-state="open"],
-.open-label {
+.dannebrog-demo[data-state="open"] .open-label {
   display:
           inline;
 }
