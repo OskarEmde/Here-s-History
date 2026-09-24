@@ -1060,3 +1060,236 @@
  }
 
 }
+
+
+
+
+/* Produktside: to store plakater med informationsbjælke */
+.product-page .catalog-section {
+ max-width: 1320px;
+ margin: auto;
+ padding: 72px clamp(20px, 6vw, 90px) 90px;
+}
+
+.product-page .catalog-heading {
+ margin-bottom: 48px;
+}
+
+.product-page .catalog-grid {
+ display: grid;
+ grid-template-columns: repeat(2, minmax(0, 1fr));
+ gap: clamp(24px, 5vw, 80px);
+ align-items: start;
+}
+
+.product-page .catalog-card {
+ width: 100%;
+ max-width: none;
+ margin: 0;
+ background: transparent;
+ color: #241c18;
+ border: 0;
+}
+
+.product-page .catalog-image {
+ aspect-ratio: 1.2 / 1;
+ height: auto;
+ background: #dedbd4;
+}
+
+.product-page .catalog-image > img {
+ display: block;
+ object-fit: cover;
+}
+
+.product-page .catalog-bio {
+ display: grid;
+ place-items: center;
+ min-height: 66px;
+ padding: 12px 16px;
+ background: #d5c9b7;
+ color: #241c18;
+ font: 600 clamp(19px, 2.1vw, 26px)/1.25 'Cormorant Garamond', serif;
+ text-align: center;
+}
+
+.product-page .catalog-info {
+ padding: 22px 0 0;
+}
+
+.product-page .catalog-info h2 {
+ color: #241c18;
+}
+
+.product-page .catalog-info > p:not(.eyebrow) {
+ color: #584d43;
+}
+
+.product-page .catalog-bottom {
+ border-top-color: #a99379;
+}
+
+.product-page .catalog-help {
+ margin-top: 48px;
+}
+
+@media (max-width: 700px) {
+ .product-page .catalog-section {
+  padding: 48px 20px 65px;
+ }
+
+ .product-page .catalog-grid {
+  grid-template-columns: 1fr;
+  gap: 48px;
+ }
+
+ .product-page .catalog-heading {
+  margin-bottom: 32px;
+ }
+}
+
+/* Vis hele billederne i produktkort på forside og produktside */
+.products-section .product-media,
+.product-page .catalog-image {
+ aspect-ratio: 3 / 2;
+ height: auto;
+ background: #222a3a;
+}
+
+.products-section .product-media img,
+.product-page .catalog-image > img {
+ width: 100%;
+ height: 100%;
+ object-fit: contain;
+ object-position: center;
+}
+
+
+/* Koncept på forsiden */
+.concept-home {
+ max-width: 1300px;
+ margin: auto;
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ align-items: center;
+ gap: clamp(40px, 7vw, 110px);
+}
+
+.concept-home-intro h2,
+.concept-close h2 {
+ font: 700 clamp(42px, 5vw, 68px)/1.05 'Cormorant Garamond', serif;
+ margin: 12px 0 20px;
+}
+
+.concept-home-intro > p:not(.eyebrow),
+.concept-close > p:not(.eyebrow) {
+ font-size: 18px;
+ line-height: 1.75;
+ color: #5c5046;
+}
+
+.concept-home-intro .btn {
+ margin-top: 20px;
+}
+
+.concept-home-points {
+ display: grid;
+ gap: 16px;
+}
+
+.concept-home-points article {
+ display: grid;
+ grid-template-columns: 55px 1fr;
+ gap: 18px;
+ padding: 22px;
+ border: 1px solid var(--line);
+ background: rgba(255, 255, 255, .35);
+}
+
+.concept-home-points span {
+ color: #a87947;
+ font: 700 38px/1 'Cormorant Garamond', serif;
+}
+
+.concept-home-points h3 {
+ font: 700 29px/1.15 'Cormorant Garamond', serif;
+ margin: 0 0 8px;
+}
+
+.concept-home-points p {
+ color: #5c5046;
+ line-height: 1.6;
+ margin: 0;
+}
+
+/* Koncept på undersiden */
+.concept-examples {
+ max-width: 1250px;
+ margin: 65px auto 0;
+ display: grid;
+ gap: 75px;
+}
+
+.concept-example {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ align-items: center;
+ gap: clamp(30px, 5vw, 70px);
+}
+
+.concept-example-reverse .concept-example-image {
+ order: 2;
+}
+
+.concept-example-image {
+ background: #222a3a;
+ border: 8px solid #211c1c;
+ box-shadow: var(--shadow);
+}
+
+.concept-example-image img {
+ display: block;
+ width: 100%;
+ aspect-ratio: 3 / 2;
+ object-fit: contain;
+}
+
+.concept-example-text h2 {
+ font: 700 clamp(36px, 4vw, 54px)/1.1 'Cormorant Garamond', serif;
+ margin: 10px 0 20px;
+}
+
+.concept-example-text p:not(.eyebrow) {
+ color: #5c5046;
+ font-size: 18px;
+ line-height: 1.75;
+}
+
+.concept-close {
+ max-width: 800px;
+ margin: 90px auto 0;
+ text-align: center;
+}
+
+.concept-close .btn {
+ margin-top: 18px;
+}
+
+@media (max-width: 800px) {
+ .concept-home,
+ .concept-example {
+  grid-template-columns: 1fr;
+ }
+
+ .concept-example-reverse .concept-example-image {
+  order: 0;
+ }
+
+ .concept-examples {
+  gap: 55px;
+ }
+
+ .concept-close {
+  margin-top: 70px;
+ }
+}
