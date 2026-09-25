@@ -40,3 +40,18 @@
 /* Correct labels independently of the erroneous comma selectors in the shared stylesheet. */
 .subpage .dannebrog-demo[data-state="closed"] .closed-label { display:inline; }
 .subpage .dannebrog-demo[data-state="closed"] { display:block; }
+
+.about-page .sub-hero {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-page .sub-hero-inner {
+    max-width: 750px;
+}
+
+.about-page .sub-hero-inner > p:not(.eyebrow) {
+    margin-left: auto;
+    margin-right: auto;
+}
